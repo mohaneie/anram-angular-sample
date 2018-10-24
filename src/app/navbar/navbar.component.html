@@ -1,0 +1,12 @@
+
+<mat-toolbar color="navbar">
+    <mat-toolbar-row>
+       <span><img src="../../assets/download.jfif" width="100" height="50" alt="">
+        </span>
+
+      <span class="spacer"></span>
+      <a mat-button *ngIf="!isLoggedIn" routerLink="login">LOGIN</a>
+      <a mat-button *ngIf="!isLoggedIn" routerLink="create">CREATEUSER</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

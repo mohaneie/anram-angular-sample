@@ -1,0 +1,19 @@
+<div fxLayout="row" class="loginMargin">
+  <div fxFlex fxLayout="column">
+    <form fxLayout="column" fxFlexAlign="center" name="loginForm" #loginForm="ngForm" (ngSubmit)="userLogin(loginForm)">
+      <h4 fxFlexAlign="center">LOGIN</h4>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Email" name="Email" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="password" minlength="6" name="Password" ngModel required>
+      </mat-form-field>
+      <span>
+        <button type="submit" mat-raised-button color="primary"  [disabled]="loginForm.invalid">Login</button>
+      </span>
+      <div>
+      <a mat-button routerLink="/change">ChangePassword</a> <a mat-button routerLink="/forgot">ForgotPassword</a>
+    </div>
+    </form>
+  </div>
+</div>
